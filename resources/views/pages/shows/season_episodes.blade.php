@@ -22,7 +22,7 @@
 
 <!-- Banner -->
 @if(get_web_banner('list_top')!="")      
-<div class="vid-item-ptb banner_ads_item">
+<!-- <div class="vid-item-ptb banner_ads_item">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12">
@@ -30,7 +30,7 @@
 			</div>
 		</div>  
 	</div>
-</div>
+</div> -->
 @endif
 
 <!-- Start View All Movies -->
@@ -82,7 +82,7 @@
 
 <!-- Banner -->
 @if(get_web_banner('list_bottom')!="")      
-<div class="vid-item-ptb banner_ads_item pb-3">
+<!-- <div class="vid-item-ptb banner_ads_item pb-3">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12">
@@ -90,7 +90,7 @@
 			</div>
 		</div>  
 	</div>
-</div>
+</div> -->
 @endif
  
 @endsection

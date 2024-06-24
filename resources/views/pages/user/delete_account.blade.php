@@ -27,7 +27,7 @@
 
 <!-- Banner -->
 @if(get_web_banner('other_page_top')!="")      
-      <div class="vid-item-ptb banner_ads_item pb-1" style="padding: 15px 0;">
+      <!-- <div class="vid-item-ptb banner_ads_item pb-1" style="padding: 15px 0;">
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-12">
@@ -35,7 +35,7 @@
           </div>
         </div>  
         </div>
-      </div>
+      </div> -->
   @endif
 
 <!-- Start Details Info Page -->
@@ -76,7 +76,7 @@
 
 <!-- Banner -->
 @if(get_web_banner('other_page_bottom')!="")      
-      <div class="vid-item-ptb banner_ads_item pb-1" style="padding: 15px 0;">
+      <!-- <div class="vid-item-ptb banner_ads_item pb-1" style="padding: 15px 0;">
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-12">
@@ -84,7 +84,7 @@
           </div>
         </div>  
         </div>
-      </div>
+      </div> -->
   @endif
 
   <script src="{{ URL::asset('site_assets/js/jquery-3.3.1.min.js') }}"></script> 

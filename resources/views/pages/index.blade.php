@@ -11,7 +11,7 @@
   
   <!-- Banner -->
   @if(get_web_banner('home_top')!="")      
-      <div class="vid-item-ptb banner_ads_item pb-1" style="padding: 15px 0;">
+      <!-- <div class="vid-item-ptb banner_ads_item pb-1" style="padding: 15px 0;">
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-12">
@@ -19,7 +19,7 @@
           </div>
         </div>  
         </div>
-      </div>
+      </div> -->
   @endif
 
  @if(Auth::check() && $recently_watched->count() >0) 
@@ -358,7 +358,7 @@
 
   <!-- Banner -->
   @if(get_web_banner('home_bottom')!="")      
-      <div class="vid-item-ptb banner_ads_item pb-1" style="padding: 15px 0;">
+      <!-- <div class="vid-item-ptb banner_ads_item pb-1" style="padding: 15px 0;">
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-12">
@@ -366,7 +366,7 @@
           </div>
         </div>  
         </div>
-      </div>
+      </div> -->
   @endif
   
  

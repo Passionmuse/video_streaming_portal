@@ -53,7 +53,7 @@
           </div>
           <div class="col-lg-9 col-md-8 col-sm-12 col-xs-12">
           <div class="row">
-            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+            <!-- <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
               <div class="member-ship-option">
               
               <h5 class="color-up">{{trans('words.my_subscription')}}</h5>
@@ -70,13 +70,13 @@
 
               @else
 
-                <!-- <div class="mt-3"><a href="{{ URL::to('membership_plan') }}" class="vfx-item-btn-danger text-uppercase">{{trans('words.select_plan')}}</a></div> -->
+                <div class="mt-3"><a href="{{ URL::to('membership_plan') }}" class="vfx-item-btn-danger text-uppercase">{{trans('words.select_plan')}}</a></div>
                 
               @endif
               
               </div>
             
-            </div>
+            </div> -->
             <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
               <div class="member-ship-option">
               <h5 class="color-up">{{trans('words.last_invoice')}}</h5>
@@ -85,11 +85,11 @@
                 <span>{{date('F,  d, Y',$user->start_date)}}</span>
                 @endif
               </span>
-              <span class="premuim-memplan-bold-text"><strong>{{trans('words.plan')}}:</strong>
+              <!-- <span class="premuim-memplan-bold-text"><strong>{{trans('words.plan')}}:</strong>
                 @if($user->plan_id)
                 <span>{{\App\SubscriptionPlan::getSubscriptionPlanInfo($user->plan_id,'plan_name')}}</span>
                 @endif
-              </span>
+              </span> -->
               <span class="premuim-memplan-bold-text"><strong>{{trans('words.amount')}}:</strong>
                 @if($user->plan_amount)
                 <span>{{number_format($user->plan_amount,2,'.', '') }}</span>
@@ -116,7 +116,7 @@
       <table class="fl-table">
         <thead>
           <tr>            
-            <th>{{trans('words.plan')}}</th>
+            <!-- <th>{{trans('words.plan')}}</th> -->
             <th>{{trans('words.amount')}}</th>
             <th>{{trans('words.payment_gateway')}}</th>
             <th>{{trans('words.payment_id')}}</th>
@@ -126,7 +126,7 @@
         <tbody>
           @foreach($transactions_list as $i => $transaction_data)
           <tr>                      
-            <td><span class="current-plan-item">{{\App\SubscriptionPlan::getSubscriptionPlanInfo($transaction_data->plan_id,'plan_name')}}</span></td>
+            <!-- <td><span class="current-plan-item">{{\App\SubscriptionPlan::getSubscriptionPlanInfo($transaction_data->plan_id,'plan_name')}}</span></td> -->
             <td>{{html_entity_decode(getCurrencySymbols(getcong('currency_code')))}} {{ number_format($transaction_data->payment_amount,2) }}
             @if($transaction_data->coupon_code!="")
               &nbsp;

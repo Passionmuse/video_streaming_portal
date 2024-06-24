@@ -24,7 +24,7 @@
 
 <!-- Banner -->
 @if(get_web_banner('details_top')!="")      
-<div class="vid-item-ptb banner_ads_item">
+<!-- <div class="vid-item-ptb banner_ads_item">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12">
@@ -32,7 +32,7 @@
 			</div>
 		</div>  
 	</div>
-</div>
+</div> -->
 @endif
  
 <link rel="stylesheet" type="text/css" href="{{ URL::asset('site_assets/player/content/global.css') }}">
@@ -357,7 +357,7 @@
 
 <!-- Banner -->
 @if(get_web_banner('details_bottom')!="")      
-<div class="vid-item-ptb banner_ads_item pb-3">
+<!-- <div class="vid-item-ptb banner_ads_item pb-3">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12">
@@ -365,7 +365,7 @@
 			</div>
 		</div>  
 	</div>
-</div>
+</div> -->
 @endif 
 
  <script type="text/javascript">
