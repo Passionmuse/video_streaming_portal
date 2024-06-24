@@ -21,19 +21,6 @@
 @section('head_url', Request::url())
 
 @section('content')
-
-<!-- Banner -->
-@if(get_web_banner('details_top')!="")      
-<!-- <div class="vid-item-ptb banner_ads_item">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-12">
-				{!!stripslashes(get_web_banner('details_top'))!!}
-			</div>
-		</div>  
-	</div>
-</div> -->
-@endif
  
 <link rel="stylesheet" type="text/css" href="{{ URL::asset('site_assets/player/content/global.css') }}">
 <script type="text/javascript" src="{{ URL::asset('site_assets/player/java/FWDEVPlayer.js') }}"></script>
@@ -295,7 +282,7 @@
                 </div> 
                 @endif
 
-              <img src="{{URL::to('/'.$episode_data->video_image)}}" onload="checkImagesize(this)" alt="{{stripslashes($episode_data->video_title)}}" title="{{stripslashes($episode_data->video_title)}}">         
+              <img src="{{URL::to('/'.$episode_data->video_image)}}" alt="{{stripslashes($episode_data->video_title)}}" title="{{stripslashes($episode_data->video_title)}}">         
              </div>
              <div class="season-title-item">
               <h3>{{Str::limit(stripslashes($episode_data->video_title),25)}}</h3>
@@ -318,6 +305,30 @@
           <h3>{{trans('words.seasons_text')}}</h3>           
         </div>
         <div class="season-item-related owl-carousel">
+          @foreach($season_list as $season_data)
+          @php
+                   
+                   list($season_img_width, $season_img_height) = getimagesize(URL::to('/'.str_replace(" ", "%20", $season_data->season_poster)));
+                   if ($season_img_width > $season_img_height) {
+                        $orientation = "landscape";
+                    } else {
+                        $orientation = "portrait";
+                    }
+                   
+            @endphp
+
+          <div class="single-video {{$orientation}}">
+          <a href="{{ URL::to('shows/'.$series_info->series_slug.'/seasons/'.$season_data->season_slug.'/'.$season_data->id) }}" title="{{stripslashes($season_data->season_name)}}">
+             <div class="video-img">  
+  
+              <img src="{{URL::to('/'.$season_data->season_poster)}}" alt="{{$season_data->season_name}}" alt="{{stripslashes($season_data->season_name)}}" title="{{stripslashes($season_data->season_name)}}">         
+             </div>
+             <div class="season-title-item">
+              <h3>{{stripslashes($season_data->season_name)}}</h3>
+             </div> 
+          </a>
+          </div>
+          @endforeach           
                
         </div>
         </div>
@@ -332,17 +343,6 @@
 <!-- End Page Content Area --> 
 
 <!-- Banner -->
-@if(get_web_banner('details_bottom')!="")      
-<!-- <div class="vid-item-ptb banner_ads_item pb-3">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-12">
-				{!!stripslashes(get_web_banner('details_bottom'))!!}
-			</div>
-		</div>  
-	</div>
-</div> -->
-@endif 
 
  <script type="text/javascript">
     
@@ -369,20 +369,4 @@
   
   </script>
  
-@endsection
-
-@section('user_js')
-  <script type="text/javascript"> 
-      function checkImageSize(img) {
-          // Access the image's naturalWidth and naturalHeight properties
-          var width = img.naturalWidth;
-          var height = img.naturalHeight;
-
-          // Determine orientation based on width and height
-          var orientation = (width > height) ? 'landscape' : 'portrait';
-
-          // Add orientation class to parent element
-          img.parentElement.parentElement.parentElement.classList.add(orientation);
-      }
-  </script>
 @endsection

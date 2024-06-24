@@ -25,17 +25,6 @@
 
 
 <!-- Banner -->
-@if(get_web_banner('details_top')!="")      
-<!-- <div class="vid-item-ptb banner_ads_item">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-12">
-				{!!stripslashes(get_web_banner('details_top'))!!}
-			</div>
-		</div>  
-	</div>
-</div> -->
-@endif
 
 @if($movies_info->trailer_url!="")
 
@@ -219,19 +208,6 @@
   </div>
 </div>
 <!-- End Page Content Area --> 
-
-<!-- Banner -->
-@if(get_web_banner('details_bottom')!="")      
-<!-- <div class="vid-item-ptb banner_ads_item pb-3">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-12">
-				{!!stripslashes(get_web_banner('details_bottom'))!!}
-			</div>
-		</div>  
-	</div>
-</div> -->
-@endif 
 
 
 <script type="text/javascript">
