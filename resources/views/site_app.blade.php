@@ -193,8 +193,6 @@ function showSuggestions(inputString) {
 
 </script>
 
-
-
 @if(Auth::check())
 
 @if(Auth::user()->usertype!="Admin" AND Auth::user()->usertype!="Sub_Admin")
@@ -250,6 +248,6 @@ $(document).ready(function() {
 @endif
 
  
-  @yield("user_js")  
+
 </body>
 </html>
