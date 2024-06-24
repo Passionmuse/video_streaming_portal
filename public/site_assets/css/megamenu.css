@@ -129,6 +129,7 @@
 	display: inline-block;
 	margin-top: 10px;
 	margin-bottom:10px;
+	width:80px;
 }
 .header-section .row {
 	position: static;
@@ -441,6 +442,24 @@ a.navbar-toggle, a.navbar-toggle:hover, a.navbar-toggle:focus {
 }
 .header-section .main-nav.rightnav {
 	float: right;
+}
+.header-section .main-nav.statenav {
+	float: right;
+}
+.header-section .logostate{
+    float: right;
+}
+@media only screen and (max-width: 1000px) {
+ .header-section .main-nav.statenav {
+    	float: right;
+        text-align: right;
+        right: 0;
+        display: block;
+        position: absolute;
+    }   
+    .header-section .logostate{
+        float: none;
+    }
 }
 @media only screen and (max-width: 990px) {
 .header-section.padtop {
