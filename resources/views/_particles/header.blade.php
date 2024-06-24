@@ -62,9 +62,9 @@
               <a type="submit" href="#popup1" class="btn btn-default open" title="search"><i class="fa fa-search"></i></a>
             </form>
           </div>
-          <div class="subscribe-btn-item">
+          <!-- <div class="subscribe-btn-item">
             <a href="{{ URL::to('membership_plan') }}" title="subscribe"><img src="{{ URL::asset('site_assets/images/ic-subscribe.png') }}" alt="ic-subscribe" title="ic-subscribe"></a>
-          </div>
+          </div> -->
           @if(Auth::check())
 
           <div class="user-menu">
