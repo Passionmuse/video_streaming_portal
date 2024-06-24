@@ -165,20 +165,46 @@
         <div class="vfx-item-section">
           <h3>{{trans('words.seasons_text')}}</h3>           
         </div>
-       
         <div class="season-item-related owl-carousel">
-          @foreach($season_list as $season_data)
-            <div class="single-video">
-            <a href="{{ URL::to('shows/'.$series_info->series_slug.'/seasons/'.$season_data->season_slug.'/'.$season_data->id) }}" title="{{stripslashes($season_data->season_name)}}">
-              <div class="video-img">  
-                  <img src="{{URL::to('/'.$season_data->season_poster)}}" onload="checkImageSize(this)" alt="{{$season_data->season_name}}" alt="{{stripslashes($season_data->season_name)}}" title="{{stripslashes($season_data->season_name)}}">         
-              </div>
-              <div class="season-title-item">
-                <h3>{{stripslashes($season_data->season_name)}}</h3>
-              </div> 
-            </a>
-            </div>
-          @endforeach
+        <!-- <script>
+              function checkImageSize(img) {
+                  // Access the image's naturalWidth and naturalHeight properties
+                  var width = img.naturalWidth;
+                  var height = img.naturalHeight;
+
+                  // Determine orientation based on width and height
+                  var orientation = (width > height) ? 'landscape' : 'portrait';
+
+                  // Add orientation class to parent element
+                  img.parentElement.parentElement.classList.add(orientation);
+              }
+          </script> -->
+          <!-- @foreach($season_list as $season_data)
+
+              @php
+                   list($season_img_width, $season_img_height) = getimagesize(URL::to('/'.str_replace(" ", "%20", $season_data->season_poster)));
+                   if ($season_img_width > $season_img_height) {
+                        $orientation = "landscape";
+                    } else {
+                        $orientation = "portrait";
+                    }
+              @endphp
+
+          <div class="single-video {{$orientation}}">
+          <div class="single-video">
+
+          
+          <a href="{{ URL::to('shows/'.$series_info->series_slug.'/seasons/'.$season_data->season_slug.'/'.$season_data->id) }}" title="{{stripslashes($season_data->season_name)}}">
+             <div class="video-img">  
+  
+              <img src="{{URL::to('/'.$season_data->season_poster)}}" onload="checkImageSize(this)" alt="{{$season_data->season_name}}" alt="{{stripslashes($season_data->season_name)}}" title="{{stripslashes($season_data->season_name)}}">         
+             </div>
+             <div class="season-title-item">
+              <h3>{{stripslashes($season_data->season_name)}}</h3>
+             </div> 
+          </a>
+          </div>
+          @endforeach -->
                       
         </div>
         </div>
@@ -204,19 +230,4 @@
 </div> -->
 @endif
  
-@endsection
-@section('user_js')
-  <script type="text/javascript"> 
-      function checkImageSize(img) {
-          // Access the image's naturalWidth and naturalHeight properties
-          var width = img.naturalWidth;
-          var height = img.naturalHeight;
-
-          // Determine orientation based on width and height
-          var orientation = (width > height) ? 'landscape' : 'portrait';
-
-          // Add orientation class to parent element
-          img.parentElement.parentElement.parentElement.classList.add(orientation);
-      }
-  </script>
 @endsection
