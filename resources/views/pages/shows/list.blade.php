@@ -10,19 +10,6 @@
   @include("pages.shows.slider")  
 @endif
 
-<!-- Banner -->
-@if(get_web_banner('list_top')!="")      
-<!-- <div class="vid-item-ptb banner_ads_item">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-12">
-				{!!stripslashes(get_web_banner('list_top'))!!}
-			</div>
-		</div>  
-	</div>
-</div> -->
-@endif
-
 <link rel="stylesheet" href="{{ URL::asset('site_assets/css/nice-select.css') }}">
 
 <!-- Start View All Shows -->
@@ -92,17 +79,5 @@
 </div>
 <!-- End View All Shows -->
 
-<!-- Banner -->
-@if(get_web_banner('list_bottom')!="")      
-<!-- <div class="vid-item-ptb banner_ads_item pb-3">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-12">
-				{!!stripslashes(get_web_banner('list_bottom'))!!}
-			</div>
-		</div>  
-	</div>
-</div> -->
-@endif
  
 @endsection

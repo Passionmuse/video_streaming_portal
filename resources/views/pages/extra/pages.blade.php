@@ -26,17 +26,7 @@
 <!-- End Breadcrumb --> 
 
 <!-- Banner -->
-@if(get_web_banner('other_page_top')!="")      
-      <!-- <div class="vid-item-ptb banner_ads_item pb-1" style="padding: 15px 0;">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-12">
-             {!!stripslashes(get_web_banner('other_page_top'))!!}
-          </div>
-        </div>  
-        </div>
-      </div> -->
-  @endif
+
 
 <!-- Start Details Info Page -->
 <div class="details-page-area vfx-item-ptb vfx-item-info">
@@ -53,18 +43,5 @@
   </div>
 </div>
 <!-- End Details Info Page -->  
-
-<!-- Banner -->
-@if(get_web_banner('other_page_bottom')!="")      
-      <!-- <div class="vid-item-ptb banner_ads_item pb-1" style="padding: 15px 0;">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-12">
-             {!!stripslashes(get_web_banner('other_page_bottom'))!!}
-          </div>
-        </div>  
-        </div>
-      </div> -->
-  @endif
  
 @endsection

@@ -36,7 +36,7 @@
             <div class="splide-slider-details-area">
               <h1>{{stripslashes($slider_data->slider_title)}}</h1>
               <a href="{{$slider_url}}" class="btn-watch" title="{{stripslashes($slider_data->slider_title)}}"><img src="{{ URL::asset('site_assets/images/ic-play.png') }}" alt="ic-play" title="ic-play">{{trans('words.watch')}}</a>
-              <!-- <a href="{{ URL::to('membership_plan') }}" class="btn-buy-plan" title="buy-plan"><img src="{{ URL::asset('site_assets/images/ic-subscribe.png') }}" alt="ic-subscribe" title="ic-subscribe">{{trans('words.buy_plan')}}</a> -->
+              <!--<a href="{{ URL::to('membership_plan') }}" class="btn-buy-plan" title="buy-plan"><img src="{{ URL::asset('site_assets/images/ic-subscribe.png') }}" alt="ic-subscribe" title="ic-subscribe">{{trans('words.buy_plan')}}</a>-->
             </div>
             <img src="{{URL::to('/'.$slider_data->slider_image)}}" title="{{stripslashes($slider_data->slider_title)}}" alt="{{stripslashes($slider_data->slider_title)}}">
           </a>

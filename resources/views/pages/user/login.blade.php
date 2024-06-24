@@ -34,7 +34,7 @@ function verifyCaptcha() {
       <div class="col-md-12">
         <div class="hero-wrap d-flex align-items-center h-100">
           <div class="hero-mask"></div>
-          <div class="hero-bg hero-bg-scroll" style="background-image:url('{{ URL::asset('/site_assets/images/login-signup-bg-img.jpg') }}');"></div>
+          <div class="hero-bg hero-bg-scroll" style="background-image:url('{{ URL::asset('site_assets/images/login-signup-bg-img.jpg') }}');"></div>
           <div class="hero-content mx-auto w-100 h-100 d-flex flex-column justify-content-center">
             <div class="row">
               <div class="col-12 col-lg-5 col-xl-5 mx-auto">

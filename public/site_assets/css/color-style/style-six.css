@@ -29,7 +29,8 @@ body {
 	font-family: 'Nunito', sans-serif;
 	font-size: 14px;
 	font-weight: 500;
-	background:#000000;
+	/*background:#000000;*/
+	background: #261b14 ;
 	color: #ffffff;
 }
 p {
@@ -585,7 +586,8 @@ img {
 	padding: 20px 0;
 }
 .vfx-item-ptb {
-	padding: 15px 0;
+	padding-top: 7px;
+	padding-bottom: 0px;
 }
 .vfx-item-ptb-2 {
 	padding: 70px 0;
@@ -993,8 +995,11 @@ h2.form-title-item::before {
 .header-top .mail-address a {
 	text-transform: lowercase;
 }
-.header-section, .header-section.pin-style.pin {
-	background-color: #000000;
+.header-section{
+	background-color: #1b1718;
+}  
+.header-section.pin-style.pin {
+	background-color: #000;
 }  
 .site-info div {
 	display: inline-block;
@@ -1415,12 +1420,12 @@ ul.nav > li.active > a {
 	opacity: 1;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
-ul.nav > li > a {
-	border-bottom: 4px solid transparent;	
-}
+/*ul.nav > li > a {*/
+/*	border-bottom: 4px solid transparent;	*/
+/*}*/
 ul.nav > li a.active, ul.nav > li:hover > a {
-	border-color: #ff0015;
-	color: #ff0015;
+	border-color: #FF6506;
+	color: #FF6506;
 	opacity: 1;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
@@ -2562,10 +2567,11 @@ ul.nav > li a.active, ul.nav > li:hover > a {
 	Footer Area
 -----------------------------------------*/
 .footer-area {
-	background: url('../../../site_assets/images/footer-bg-item.png'), #101011;
+	/*background: url('../../../site_assets/images/footer-bg-item.png'), #101011;*/
+	background-color: #1b1718;
 	-webkit-background-size: contain;
 	background-size: 100% auto;
-	padding:50px 0;
+	/*padding:50px 0;*/
 }
 .single-footer-text p {
 	line-height: 24px;
@@ -2596,19 +2602,17 @@ ul.nav > li a.active, ul.nav > li:hover > a {
 .social-links ul li {
 	display: inline-block;
 }
-.single-footer .social-links {
-	margin-top: 20px;
-}
+
 .social-links ul li a {
 	display: block;
 	width: 34px;
 	height: 34px;
 	line-height: 36px;
 	text-align: center;
-	background-color: #ffffff;
+	/*background-color: #ffffff;*/
 	margin-right: 5px;
 	border-radius: 50%;
-	font-size: 16px;
+	font-size: 25px;
 	color: #323232;
 	-webkit-transition: all .4s linear 0s;
 	transition: all .4s linear 0s;
@@ -4397,7 +4401,7 @@ header .modal-body .btn.btn-primary {
   }
 }
 .header-section ul li:hover > a {
-	color: #ff0015;
+	color: #FF6506;
 }
 header .modal-content {
 	border-radius: 0;

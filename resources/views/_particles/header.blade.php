@@ -2,20 +2,20 @@
 <header>
   <!-- Start Navigation Area -->
   <div class="main-menu"> 
-    <nav class="header-section pin-style">
+    <nav class="header-section pin-style" style="background-color: #1b1718 !important;">
       <div class="container-fluid">
         <div class="mod-menu">
-          <div class="row">
+          <div class="row" >
             <div class="col-2"> 
               @if(getcong('site_logo'))                 
-                <a href="{{ URL::to('/') }}" title="logo" class="logo"><img src="{{ URL::asset('/'.getcong('site_logo')) }}" alt="logo" title="logo"></a>
+                <a href="{{ URL::to('/') }}" title="logo" class="logo logostate"><img src="{{ URL::asset('/'.getcong('site_logo')) }}" alt="logo" title="logo"></a>
               @else
-                <a href="{{ URL::to('/') }}" title="logo" class="logo"><img src="{{ URL::asset('site_assets/images/logo.png') }}" alt="logo" title="logo"></a>                          
+                <a href="{{ URL::to('/') }}" title="logo" class="logo logostate"><img src="{{ URL::asset('site_assets/images/logo.png') }}" alt="logo" title="logo"></a>                          
               @endif
  
             </div>
-            <div class="col-7 nav-order-last nopadding">
-              <div class="main-nav leftnav">
+            <div class="col-8 nav-order-last nopadding">
+              <div class="main-nav statenav">
                 <ul class="top-nav">
                   <li class="visible-this d-md-none menu-icon"> <a href="#" class="navbar-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#menu" aria-expanded="false" title="menu-toggle"><i class="fa fa-bars"></i></a> </li>
                 </ul>
@@ -33,21 +33,21 @@
 
                     @if(getcong('menu_sports'))
                     <li><a href="{{ URL::to('sports') }}" class="{{classActivePathSite('sports')}}" title="{{trans('words.sports_text')}}">{{trans('words.sports_text')}}</a> <span class="arrow"></span>
-                      <ul class="dm-align-2 mega-list">
-                        @foreach(\App\SportsCategory::where('status','1')->orderBy('category_name')->get() as $sports_cat)
-                        <li><a href="{{ URL::to('sports/?cat_id='.$sports_cat->id) }}" title="{{$sports_cat->category_name}}">{{$sports_cat->category_name}}</a></li>
-                        @endforeach     
-                      </ul>
+                      <!--<ul class="dm-align-2 mega-list">-->
+                      <!--  @foreach(\App\SportsCategory::where('status','1')->orderBy('category_name')->get() as $sports_cat)-->
+                      <!--  <li><a href="{{ URL::to('sports/?cat_id='.$sports_cat->id) }}" title="{{$sports_cat->category_name}}">{{$sports_cat->category_name}}</a></li>-->
+                      <!--  @endforeach     -->
+                      <!--</ul>-->
                     </li>
                     @endif     
 
                     @if(getcong('menu_livetv'))
                     <li><a href="{{ URL::to('livetv') }}" class="{{classActivePathSite('livetv')}}" title="{{trans('words.live_tv')}}">{{trans('words.live_tv')}}</a> <span class="arrow"></span>
-                      <ul class="dm-align-2 mega-list">
-                        @foreach(\App\TvCategory::where('status','1')->orderBy('category_name')->get() as $tv_cat)
-                          <li><a href="{{ URL::to('livetv/?cat_id='.$tv_cat->id) }}" title="{{$tv_cat->category_name}}">{{$tv_cat->category_name}}</a></li>
-                        @endforeach     
-                      </ul>
+                      <!--<ul class="dm-align-2 mega-list">-->
+                      <!--  @foreach(\App\TvCategory::where('status','1')->orderBy('category_name')->get() as $tv_cat)-->
+                      <!--    <li><a href="{{ URL::to('livetv/?cat_id='.$tv_cat->id) }}" title="{{$tv_cat->category_name}}">{{$tv_cat->category_name}}</a></li>-->
+                      <!--  @endforeach     -->
+                      <!--</ul>-->
                     </li>
                     @endif    
  
@@ -55,16 +55,16 @@
                 </div>
               </div>
             </div>
-      <div class="col-3"> 
+      <div class="col-2"> 
         <div class="right-sub-item-area">
           <div class="search-item-block">
             <form class="navbar-form navbar-left">
               <a type="submit" href="#popup1" class="btn btn-default open" title="search"><i class="fa fa-search"></i></a>
             </form>
           </div>
-          <!-- <div class="subscribe-btn-item">
-            <a href="{{ URL::to('membership_plan') }}" title="subscribe"><img src="{{ URL::asset('site_assets/images/ic-subscribe.png') }}" alt="ic-subscribe" title="ic-subscribe"></a>
-          </div> -->
+          <!--<div class="subscribe-btn-item">-->
+          <!--  <a href="{{ URL::to('membership_plan') }}" title="subscribe"><img src="{{ URL::asset('site_assets/images/ic-subscribe.png') }}" alt="ic-subscribe" title="ic-subscribe"></a>-->
+          <!--</div>-->
           @if(Auth::check())
 
           <div class="user-menu">
