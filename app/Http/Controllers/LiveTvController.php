@@ -171,31 +171,31 @@ class LiveTvController extends Controller
         $tv_info = LiveTV::where('id',$id)->first();
 
         //Check user plan
-        if($tv_info->channel_access=="Paid")
-        {
-            if(Auth::check())
-            {
-                if(Auth::User()->usertype =="User")
-                {   
-                    $user_id=Auth::User()->id;
+        // if($tv_info->channel_access=="Paid")
+        // {
+        //     if(Auth::check())
+        //     {
+        //         if(Auth::User()->usertype =="User")
+        //         {   
+        //             $user_id=Auth::User()->id;
 
-                    $user_info = User::findOrFail($user_id);
-                    $user_plan_id=$user_info->plan_id;
-                    $user_plan_exp_date=$user_info->exp_date;
+        //             $user_info = User::findOrFail($user_id);
+        //             $user_plan_id=$user_info->plan_id;
+        //             $user_plan_exp_date=$user_info->exp_date;
 
-                    if($user_plan_id==0 OR strtotime(date('m/d/Y'))>$user_plan_exp_date)
-                    {        
-                        return redirect('membership_plan');
-                    }
-                }
-            }
-            else
-            {
-                \Session::flash('error_flash_message', 'Access denied!');
+        //             if($user_plan_id==0 OR strtotime(date('m/d/Y'))>$user_plan_exp_date)
+        //             {        
+        //                 return redirect('membership_plan');
+        //             }
+        //         }
+        //     }
+        //     else
+        //     {
+        //         \Session::flash('error_flash_message', 'Access denied!');
 
-                return redirect('login');
-            }
-        }
+        //         return redirect('login');
+        //     }
+        // }
 
          
         $related_livetv_list = LiveTV::where('status',1)->where('id','!=',$id)->where('channel_cat_id',$tv_info->channel_cat_id)->orderBy('id','DESC')->take(10)->get();
