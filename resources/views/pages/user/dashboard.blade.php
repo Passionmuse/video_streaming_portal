@@ -53,7 +53,7 @@
           </div>
           <div class="col-lg-9 col-md-8 col-sm-12 col-xs-12">
           <div class="row">
-            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+            <!-- <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
               <div class="member-ship-option">
               
               <h5 class="color-up">{{trans('words.my_subscription')}}</h5>
@@ -70,13 +70,13 @@
 
               @else
 
-                <!-- <div class="mt-3"><a href="{{ URL::to('membership_plan') }}" class="vfx-item-btn-danger text-uppercase">{{trans('words.select_plan')}}</a></div> -->
+                <div class="mt-3"><a href="{{ URL::to('membership_plan') }}" class="vfx-item-btn-danger text-uppercase">{{trans('words.select_plan')}}</a></div>
                 
               @endif
               
               </div>
             
-            </div>
+            </div> -->
             <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
               <div class="member-ship-option">
               <h5 class="color-up">{{trans('words.last_invoice')}}</h5>
