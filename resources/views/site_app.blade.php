@@ -46,6 +46,8 @@
 <!-- SweetAlert2 -->
 <script src="{{ URL::asset('site_assets/js/sweetalert2@11.js') }}"></script>
 
+@yield('pre_user_js')
+
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800&display=swap" rel="stylesheet">
 
@@ -247,7 +249,7 @@ $(document).ready(function() {
     {!!stripslashes(getcong('site_footer_code'))!!}
 @endif
 
- 
+@yield('user_js')
 
 </body>
 </html>

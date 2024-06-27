@@ -16,6 +16,22 @@
   @section('head_keywords', stripslashes($episode_info->seo_keyword)) 
 @endif
 
+@section('pre_user_js')
+  <script type="text/javascript">
+    function checkImageSize(img) {
+      // Access the image's naturalWidth and naturalHeight properties
+      var width = img.naturalWidth;
+      var height = img.naturalHeight;
+
+      // Determine orientation based on width and height
+      var orientation = (width > height) ? 'landscape' : 'portrait';
+
+      // Add orientation class to parent element
+      img.parentElement.parentElement.parentElement.classList.add(orientation);
+  }
+  </script>
+@endsection
+
 @section('head_image', URL::to('/'.$episode_info->video_image))
 
 @section('head_url', Request::url())
@@ -306,22 +322,11 @@
         </div>
         <div class="season-item-related owl-carousel">
           @foreach($season_list as $season_data)
-          @php
-                   
-                   list($season_img_width, $season_img_height) = getimagesize(URL::to('/'.str_replace(" ", "%20", $season_data->season_poster)));
-                   if ($season_img_width > $season_img_height) {
-                        $orientation = "landscape";
-                    } else {
-                        $orientation = "portrait";
-                    }
-                   
-            @endphp
-
-          <div class="single-video {{$orientation}}">
+          <div class="single-video">
           <a href="{{ URL::to('shows/'.$series_info->series_slug.'/seasons/'.$season_data->season_slug.'/'.$season_data->id) }}" title="{{stripslashes($season_data->season_name)}}">
              <div class="video-img">  
   
-              <img src="{{URL::to('/'.$season_data->season_poster)}}" alt="{{$season_data->season_name}}" alt="{{stripslashes($season_data->season_name)}}" title="{{stripslashes($season_data->season_name)}}">         
+              <img src="{{URL::to('/'.$season_data->season_poster)}}" onload="checkImageSize(this)" alt="{{$season_data->season_name}}" alt="{{stripslashes($season_data->season_name)}}" title="{{stripslashes($season_data->season_name)}}">         
              </div>
              <div class="season-title-item">
               <h3>{{stripslashes($season_data->season_name)}}</h3>
